@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between p-2 mx-auto smm:p-1 smm:w-full">
+    <nav
+      className="flex justify-between p-2 mx-auto 
+    mdm:px-[3vw]"
+    >
       <div className="flex items-center gap-x-4">
         <Image
           src="/LogoEvermoon_Primary.png"

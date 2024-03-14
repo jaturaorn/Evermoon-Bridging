@@ -15,9 +15,7 @@ const config: Config = {
           3: "#00DDFF",
         },
       },
-      backgroundImage: {
-        bgfull: "url('../public/environment1.png')",
-      },
+
       screens: {
         xsm: "400px",
         sm: "640px",
