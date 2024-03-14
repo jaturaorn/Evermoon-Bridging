@@ -24,9 +24,10 @@ const DropDownHalf2 = ({
           transpose == true
             ? "translate-x-[0%] left-[0%] "
             : "translate-x-[0%] right-[0%] "
-        } gap-x-2 
-        bg-main-2  rounded-lg text-white border-2 border-main-1
-        focus:outline-none w-[200px] transition-all duration-400`}
+        } gap-x-2 bg-main-2  rounded-lg text-white 
+        border-2 border-main-1 focus:outline-none 
+        w-[200px] transition-all duration-200 
+        mdm:bottom-[-220%] mdm:w-full`}
       >
         {selected2 === 0 && (
           <>
@@ -36,7 +37,7 @@ const DropDownHalf2 = ({
                 width={300}
                 height={300}
                 alt="Picture of the author"
-                className="w-[25px] h-[25px]"
+                className="w-[25px] mdm:w-[4.5vw]"
               />
               BNB Chain
             </div>
@@ -46,7 +47,7 @@ const DropDownHalf2 = ({
                 width={200}
                 height={200}
                 alt="Picture of the author"
-                className="w-[20px] h-[20px]"
+                className="w-[20px] mdm:w-[4.5vw]"
               />
             </div>
           </>
@@ -59,7 +60,7 @@ const DropDownHalf2 = ({
                 width={300}
                 height={300}
                 alt="Picture of the author"
-                className="w-[25px] h-[25px]"
+                className="w-[25px] mdm:w-[4.5vw]"
               />
               ImmutableX
             </div>
@@ -69,7 +70,7 @@ const DropDownHalf2 = ({
                 width={200}
                 height={200}
                 alt="Picture of the author"
-                className="w-[20px] h-[20px]"
+                className="w-[20px] mdm:w-[4.5vw]"
               />
             </div>
           </>
@@ -77,8 +78,10 @@ const DropDownHalf2 = ({
       </button>
       {isOpen2 && (
         <div
-          className="absolute left-[56%] mt-11 origin-top-right bg-main-2  rounded-lg 
-      shadow-lg w-[200px] ring-1 ring-black ring-opacity-5 z-20 border-2 border-main-1"
+          className="absolute left-[56%] mt-10 origin-top-right bg-main-2  rounded-lg 
+      shadow-lg w-[200px] ring-1 ring-black 
+      ring-opacity-5 border-2 border-main-1
+      smm:left-[0%] mdm:w-full  smm:mt-[143px]"
         >
           <ul
             role="menu"
@@ -89,14 +92,14 @@ const DropDownHalf2 = ({
               <p
                 className="flex items-center p-2 text-sm text-white 
 font-semibold hover:bg-[#FFFFFF33] hover:text-main-1 cursor-pointer
-gap-x-1"
+gap-x-1 mdm:p-[1vw]"
               >
                 <Image
                   src="/bnb-chain.png"
                   width={300}
                   height={300}
                   alt="Picture of the author"
-                  className="w-[25px] h-[25px]"
+                  className="w-[25px] mdm:w-[6vw]"
                 />
                 BNB Chain
               </p>
@@ -104,14 +107,15 @@ gap-x-1"
             <li onClick={() => selectDropdown2(1)}>
               <p
                 className="flex items-center p-2 text-sm text-white 
-    hover:bg-[#FFFFFF33] hover:text-main-1 font-semibold cursor-pointer gap-x-1"
+    hover:bg-[#FFFFFF33] hover:text-main-1 font-semibold cursor-pointer gap-x-1
+    mdm:p-[1vw]"
               >
                 <Image
                   src="/immutablex.png"
                   width={300}
                   height={300}
                   alt="Picture of the author"
-                  className="w-[25px] h-[25px]"
+                  className="w-[25px] mdm:w-[6vw]"
                 />
                 ImmutableX
               </p>

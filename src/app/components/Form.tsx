@@ -57,9 +57,9 @@ const Form = () => {
       <div
         className={` w-[500px] shadow-xl h-[550px]
   py-[24px] px-[20px] rounded-xl bg-main-2 border-2 border-main-1
-  mdm:w-[90vw]`}
+  mdm:w-[90vw] mdm:p-[3vw] mdm:h-auto mdm:border-none`}
       >
-        <div className="h-full flex flex-col gap-y-4">
+        <div className="h-full flex flex-col gap-y-4 mdm:gap-y-[3vw]">
           <div className="flex justify-between">
             <div>
               <p className="font-bold text-xl text-main-1 uppercase">bridge</p>

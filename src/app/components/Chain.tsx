@@ -45,7 +45,10 @@ const Chain = ({
 
         <button
           type="button"
-          className="absolute left-[48%] top-[60%] bg-main-2 text-white cursor-pointer"
+          className={`absolute left-[48%] top-[60%]
+           bg-main-2 text-white cursor-pointer
+          mdm:top-[160%]
+          ${isOpen1 == true ? "hidden" : "show"}`}
           onClick={() => setTranspose(!transpose)}
         >
           <Image
@@ -56,6 +59,7 @@ const Chain = ({
             className="w-[25px]"
           />
         </button>
+
         <DropDownHalf2
           transpose={transpose}
           isOpen2={isOpen2}

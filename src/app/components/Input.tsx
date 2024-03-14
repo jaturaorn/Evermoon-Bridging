@@ -10,7 +10,7 @@ const Input = ({
   handleInputChange: any;
 }) => {
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-2 mdm:mt-[140px]">
       <div className="flex justify-between">
         <h2 className="text-white">Token:</h2>
         <h2 className="text-main-3">Binance</h2>
