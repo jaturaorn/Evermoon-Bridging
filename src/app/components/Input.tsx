@@ -1,14 +1,8 @@
 import Image from "next/image";
+import { useGlobalContext } from "../context/global";
 
-const Input = ({
-  price,
-  multiplyPrice,
-  handleInputChange,
-}: {
-  price: any;
-  multiplyPrice: any;
-  handleInputChange: any;
-}) => {
+const Input = () => {
+  const { price, multiplyPrice, handleInputChange } = useGlobalContext()!;
   return (
     <div className="flex flex-col gap-y-2 mdm:mt-[110px]">
       <div className="flex justify-between">

@@ -1,22 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useGlobalContext } from "../context/global";
 
 import Image from "next/image";
 
-const Dropdown = ({
-  isOpen,
-  setIsOpen,
-  selected,
-  setSelected,
-  selectDropdown,
-}: {
-  isOpen: boolean;
-  setIsOpen: any;
-  selectDropdown: any;
-  selected: any;
-  setSelected: any;
-}) => {
+const Dropdown = () => {
+  const { isOpen, setIsOpen, selected, selectDropdown } = useGlobalContext()!;
   return (
     <div className="relative inline-block" onClick={() => setIsOpen(!isOpen)}>
       <button

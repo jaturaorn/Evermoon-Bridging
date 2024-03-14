@@ -6,10 +6,14 @@ import Dropdown from "./Dropdown";
 import Chain from "./Chain";
 import Input from "./Input";
 import Calculator from "./Calculator";
+import Modal from "./Modal";
+import { useGlobalContext } from "../context/global";
 
 const Form = () => {
+  const { isOpen, setIsOpen, showModal, setShowModal, clearAllState } =
+    useGlobalContext()!;
   const [transpose, setTranspose] = useState(false);
-  const [isOpen, SetIsOpen] = useState(false);
+  // const [isOpen, SetIsOpen] = useState(false);
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [selected, SetSelected] = useState(0);
@@ -17,6 +21,7 @@ const Form = () => {
   const [selected2, SetSelected2] = useState(1);
   const [price, setPrice] = useState("");
   const [multiplyPrice, setMultiplyPrice] = useState<number | null>(null);
+  // const [showModal, setShowModal] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
@@ -27,7 +32,7 @@ const Form = () => {
 
   const selectDropdown = (a: number) => {
     SetSelected(a);
-    SetIsOpen(isOpen);
+    setIsOpen(isOpen);
   };
 
   const selectDropdown1 = (a: number) => {
@@ -38,18 +43,6 @@ const Form = () => {
   const selectDropdown2 = (a: number) => {
     SetSelected2(a);
     setIsOpen2(isOpen);
-  };
-
-  const clearAllState = () => {
-    setTranspose(false);
-    SetIsOpen(false);
-    setIsOpen1(false);
-    setIsOpen2(false);
-    SetSelected(0);
-    setSelected1(0);
-    SetSelected2(1);
-    setPrice("");
-    setMultiplyPrice(null);
   };
 
   return (
@@ -81,35 +74,12 @@ const Form = () => {
 
           <div className="flex flex-col gap-y-1">
             <h2 className="text-white">Token:</h2>
-            <Dropdown
-              isOpen={isOpen}
-              setIsOpen={SetIsOpen}
-              selected={selected}
-              setSelected={SetSelected}
-              selectDropdown={selectDropdown}
-            />
+            <Dropdown />
           </div>
 
-          <Chain
-            transpose={transpose}
-            setTranspose={setTranspose}
-            isOpen1={isOpen1}
-            isOpen2={isOpen2}
-            setIsOpen1={setIsOpen1}
-            setIsOpen2={setIsOpen2}
-            selectDropdown1={selectDropdown1}
-            selectDropdown2={selectDropdown2}
-            selected1={selected1}
-            selected2={selected2}
-            setSelected1={setSelected1}
-            setSelected2={SetSelected2}
-          />
+          <Chain />
 
-          <Input
-            price={price}
-            multiplyPrice={multiplyPrice}
-            handleInputChange={handleInputChange}
-          />
+          <Input />
 
           <Calculator />
 
@@ -118,12 +88,14 @@ const Form = () => {
               className="bg-red-500 hover:bg-red-700 h-[50px]
         w-[440px] text-xl font-bold text-white shadow-lg
         rounded-full border-b-[5px] border-r-[3px] border-red-700/55"
+              onClick={() => setShowModal(!showModal)}
             >
               SEND
             </button>
           </div>
         </div>
       </div>
+      {showModal && <Modal />}
     </main>
   );
 };

@@ -1,20 +1,12 @@
 "use client";
 
+import { useGlobalContext } from "../context/global";
+
 import Image from "next/image";
 
-const DropDownHalf2 = ({
-  transpose,
-  isOpen2,
-  setIsOpen2,
-  selectDropdown2,
-  selected2,
-}: {
-  transpose: boolean;
-  isOpen2: boolean;
-  setIsOpen2: any;
-  selectDropdown2: any;
-  selected2: any;
-}) => {
+const DropDownHalf2 = () => {
+  const { transpose, isOpen2, setIsOpen2, selectDropdown2, selected2 } =
+    useGlobalContext()!;
   return (
     <div className="inline-block" onClick={() => setIsOpen2(!isOpen2)}>
       <button
