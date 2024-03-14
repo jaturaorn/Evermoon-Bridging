@@ -22,7 +22,7 @@ const Dropdown = ({
       <button
         type="button"
         className="flex justify-between items-center p-1 font-semibold  
-        bg-main-2 rounded-lg text-white
+        bg-main-2 rounded-lg text-white mdm:border-[1px]
         focus:outline-none w-full border-2 border-main-1"
       >
         {selected === 0 && (

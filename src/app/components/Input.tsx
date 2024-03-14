@@ -17,7 +17,8 @@ const Input = ({
       </div>
       <div
         className="flex justify-between items-center gap-x-2
-       bg-[#FFFFFF33] rounded-xl border-2 border-slate-200 p-[7px]"
+       bg-[#FFFFFF33] rounded-xl border-2 border-slate-200 p-[7px]
+       mdm:border-[1px]"
       >
         <input
           type="text"
@@ -43,7 +44,7 @@ const Input = ({
       </div>
       <div
         className="w-full h-[35px] bg-[#FFFFFF33] text-left rounded-xl outline-none 
-        border-2 border-slate-200 text-white px-[10px] flex items-center"
+        border-2 border-slate-200 text-white px-[10px] flex items-center mdm:border-[1px]"
       >
         {multiplyPrice}
       </div>

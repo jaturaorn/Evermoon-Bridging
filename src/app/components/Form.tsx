@@ -57,7 +57,7 @@ const Form = () => {
       <div
         className={` w-[500px] shadow-xl h-[550px]
   py-[24px] px-[20px] rounded-xl bg-main-2 border-2 border-main-1
-  mdm:w-[90vw] mdm:p-[3vw] xlm:h-auto smm:border-none`}
+  mdm:w-[90vw] mdm:p-[2vw] xlm:h-auto smm:border-none`}
       >
         <div className="h-full flex flex-col gap-y-4 mdm:gap-y-[3vw]">
           <div className="flex justify-between">

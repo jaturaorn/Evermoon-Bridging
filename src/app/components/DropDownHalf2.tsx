@@ -27,7 +27,7 @@ const DropDownHalf2 = ({
         } gap-x-2 bg-main-2  rounded-lg text-white 
         border-2 border-main-1 focus:outline-none 
         w-[200px] transition-all duration-200 
-        mdm:bottom-[-220%] mdm:w-full`}
+        mdm:bottom-[-198%] mdm:w-full mdm:border-[1px]`}
       >
         {selected2 === 0 && (
           <>
@@ -81,7 +81,7 @@ const DropDownHalf2 = ({
           className="absolute left-[56%] mt-10 origin-top-right bg-main-2  rounded-lg 
       shadow-lg w-[200px] ring-1 ring-black 
       ring-opacity-5 border-2 border-main-1
-      smm:left-[0%] mdm:w-full  smm:mt-[143px]"
+      smm:left-[0%] mdm:w-full  smm:mt-[140px]"
         >
           <ul
             role="menu"

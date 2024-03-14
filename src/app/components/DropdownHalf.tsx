@@ -30,7 +30,7 @@ const DropdownHalf = ({
         flex justify-between items-center p-1 font-semibold gap-x-2 
     bg-main-2  rounded-lg text-white border-2 border-main-1
     focus:outline-none w-[200px] transition-all duration-200
-    mdm:w-full`}
+    mdm:w-full mdm:border-[1px]`}
       >
         {selected1 === 0 && (
           <>

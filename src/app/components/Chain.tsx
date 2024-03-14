@@ -47,7 +47,7 @@ const Chain = ({
           type="button"
           className={`absolute left-[48%] top-[60%]
            bg-main-2 text-white cursor-pointer
-          mdm:top-[160%]
+          mdm:top-[150%] mdm:left-[47%]
           ${isOpen1 == true ? "hidden" : "show"}`}
           onClick={() => setTranspose(!transpose)}
         >
