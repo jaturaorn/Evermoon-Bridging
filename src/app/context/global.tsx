@@ -23,8 +23,8 @@ type GlobalValue = {
   setSelected1: Dispatch<SetStateAction<number>>;
   selected2: number;
   setSelected2: Dispatch<SetStateAction<number>>;
-  price: string;
-  setPrice: Dispatch<SetStateAction<string>>;
+  price: number | "";
+  setPrice: Dispatch<SetStateAction<number | "">>;
   multiplyPrice: number | null;
   setMultiplyPrice: Dispatch<SetStateAction<number | null>>;
   showModal: boolean;
@@ -46,15 +46,16 @@ export function GlobalProvider(props: any) {
   const [selected, setSelected] = useState(0);
   const [selected1, setSelected1] = useState(0);
   const [selected2, setSelected2] = useState(1);
-  const [price, setPrice] = useState("");
-  const [multiplyPrice, setMultiplyPrice] = useState<number | null>(null);
   const [showModal, setShowModal] = useState(false);
+  const [price, setPrice] = useState<number | "">("");
+  const [multiplyPrice, setMultiplyPrice] = useState<number | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
-    setPrice(inputValue);
-    const multipliedPrice = parseFloat(inputValue) * 2;
-    setMultiplyPrice(isNaN(multipliedPrice) ? 0 : multipliedPrice);
+    if (!isNaN(Number(inputValue))) {
+      setPrice(Number(inputValue));
+      setMultiplyPrice(Number(inputValue) * 2);
+    }
   };
 
   const selectDropdown = (a: number) => {
