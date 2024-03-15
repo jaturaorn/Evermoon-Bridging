@@ -3,7 +3,8 @@ import { useGlobalContext } from "../context/global";
 import Image from "next/image";
 
 const Modal = () => {
-  const { selected1, selected2, setShowModal } = useGlobalContext()!;
+  const { selected1, selected2, setShowModal, price, multiplyPrice } =
+    useGlobalContext()!;
   return (
     <div
       className={`flex justify-content items-center bg-black/40 backdrop-blur-xl  
@@ -40,8 +41,10 @@ const Modal = () => {
               />
             </div>
             <div className="flex flex-col gap-y-[14px]">
-              <p className="m-auto text-white mdm:text-sm">Send 1,000.00 EVM</p>
-              <p className="text-[#00DDFF] m-auto mdm:text-sm">~$2,452.51</p>
+              <p className="m-auto text-white mdm:text-sm">Send {price} EVM</p>
+              <p className="text-[#00DDFF] m-auto mdm:text-sm">
+                ~${multiplyPrice}
+              </p>
             </div>
             <div className="flex items-center gap-x-[10px] m-auto mdm:flex-col mdm:gap-y-[2vw]">
               <div
@@ -138,7 +141,9 @@ const Modal = () => {
                 </p>
               </div>
               <div>
-                <p className="capitalize text-white mdm:text-sm">999.70 $EVM</p>
+                <p className="capitalize text-white mdm:text-sm">
+                  {multiplyPrice} $EVM
+                </p>
               </div>
             </div>
             <div className="flex justify-between">
@@ -154,13 +159,13 @@ const Modal = () => {
           </div>
           <div className="flex flex-col gap-y-[14px] mt-[14px]">
             <div className="flex justify-center text-red-500 text-sm items-center">
-              <button className="bg-transparent rounded-full p-1">
+              <button className="bg-transparent rounded-full p-1 smm:text-xs">
                 <Image
                   src="/error.png"
                   width={300}
                   height={300}
                   alt=""
-                  className="w-[17px] mdm:w-[5vw]"
+                  className="w-[17px] mdm:w-[6vw]"
                 />
               </button>
               Please make sure your wallet is connected to the destination

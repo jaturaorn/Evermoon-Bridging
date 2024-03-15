@@ -1,4 +1,7 @@
+import { useGlobalContext } from "../context/global";
+
 const Calculator = () => {
+  const { multiplyPrice } = useGlobalContext()!;
   return (
     <div className="flex flex-col gap-y-2">
       <div className="flex justify-between xl:hidden">
@@ -11,7 +14,7 @@ const Calculator = () => {
       </div>
       <div className="flex justify-between xl:hidden">
         <h3 className="text-white capitalize">you will receive</h3>
-        <h3 className="text-white">12.3805 EVM</h3>
+        <h3 className="text-white">{multiplyPrice} EVM</h3>
       </div>
       <div className="flex justify-between">
         <h3 className="text-white">Estimate Wait</h3>
