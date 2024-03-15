@@ -26,7 +26,7 @@ const Chain = () => {
             width={100}
             height={100}
             alt="clear"
-            className="w-[25px]"
+            className="w-[25px] smm:rotate-90"
           />
         </button>
 
