@@ -34,6 +34,14 @@ type GlobalValue = {
   selectDropdown1: any;
   selectDropdown2: any;
   clearAllState: any;
+  connectWallet: boolean;
+  setConnectWallet: Dispatch<SetStateAction<boolean>>;
+  isHover: boolean;
+  setIsHover: Dispatch<SetStateAction<boolean>>;
+  copied: boolean;
+  setCopied: Dispatch<SetStateAction<boolean>>;
+  handleHoverModal: any;
+  handleCopy: any;
 } | null;
 
 export const GlobalContext = createContext<GlobalValue>(null);
@@ -49,6 +57,9 @@ export function GlobalProvider(props: any) {
   const [showModal, setShowModal] = useState(false);
   const [price, setPrice] = useState<number | "">("");
   const [multiplyPrice, setMultiplyPrice] = useState<number | null>(null);
+  const [connectWallet, setConnectWallet] = useState(false);
+  const [isHover, setIsHover] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
@@ -85,6 +96,27 @@ export function GlobalProvider(props: any) {
     setMultiplyPrice(null);
   };
 
+  const handleHoverModal = () => {
+    if (connectWallet === true) {
+      setIsHover(!isHover);
+
+      setTimeout(() => {
+        setIsHover(false);
+      }, 3000);
+    }
+  };
+
+  const handleCopy = () => {
+    const textToCopy = "0xfC6C8d";
+    try {
+      navigator.clipboard.writeText(textToCopy);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 4000);
+    } catch (error) {
+      console.error("Error copying text: ", error);
+    }
+  };
+
   const value: GlobalValue = {
     transpose,
     setTranspose,
@@ -111,7 +143,16 @@ export function GlobalProvider(props: any) {
     selectDropdown1,
     selectDropdown2,
     clearAllState,
+    connectWallet,
+    setConnectWallet,
+    isHover,
+    setIsHover,
+    handleHoverModal,
+    copied,
+    setCopied,
+    handleCopy,
   };
+
   return (
     <GlobalContext.Provider value={value}>
       {props.children}

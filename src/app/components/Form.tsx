@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+
 import Dropdown from "./Dropdown";
 import Chain from "./Chain";
 import Input from "./Input";
 import Calculator from "./Calculator";
 import Modal from "./Modal";
-import { useGlobalContext } from "../context/global";
+import { useGlobalContext } from "../context/Global";
 
 const Form = () => {
   const { showModal, setShowModal, clearAllState } = useGlobalContext()!;

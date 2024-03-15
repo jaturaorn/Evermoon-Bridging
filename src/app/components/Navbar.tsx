@@ -1,10 +1,17 @@
+"use client";
+
+import { useGlobalContext } from "../context/Global";
+
 import Image from "next/image";
+import HoverModal from "./HoverModal";
 
 const Navbar = () => {
+  const { isOpen, setIsOpen } = useGlobalContext()!;
   return (
     <nav
-      className="flex justify-between p-2 mx-auto 
+      className="flex justify-between p-2 items-center 
     mdm:px-[3vw]"
+      onMouseOut={() => setIsOpen(!isOpen)}
     >
       <div className="flex items-center gap-x-4">
         <Image
@@ -28,6 +35,7 @@ const Navbar = () => {
           className="w-[32px] xl:hidden"
         />
       </div>
+
       <div className="flex items-center xl:hidden">
         <Image
           src="/Evermoon text logo.png"
@@ -37,28 +45,7 @@ const Navbar = () => {
           className="w-[150px]"
         />
       </div>
-      <div className="flex items-center">
-        <button
-          className="flex items-center px-[20px] py-[12px] bg-[#372C7D] rounded-lg text-lg
-        gap-x-2 border-2 border-white text-white xlm:hidden"
-        >
-          <Image
-            src="/metamask.png"
-            width={300}
-            height={300}
-            alt=""
-            className="w-[30px]"
-          />
-          Connect Wallet
-        </button>
-        <Image
-          src="/login.png"
-          width={300}
-          height={300}
-          alt=""
-          className="w-[30px] xl:hidden"
-        />
-      </div>
+      <HoverModal />
     </nav>
   );
 };

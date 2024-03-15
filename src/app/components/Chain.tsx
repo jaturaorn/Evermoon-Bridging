@@ -1,6 +1,6 @@
 "use client";
 
-import { useGlobalContext } from "../context/global";
+import { useGlobalContext } from "../context/Global";
 
 import Image from "next/image";
 import DropDownHalf2 from "./DropDownHalf2";

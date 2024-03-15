@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../context/global";
+import { useGlobalContext } from "../context/Global";
 
 const Calculator = () => {
   const { multiplyPrice } = useGlobalContext()!;
