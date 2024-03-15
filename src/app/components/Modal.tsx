@@ -3,7 +3,7 @@ import { useGlobalContext } from "../context/global";
 import Image from "next/image";
 
 const Modal = () => {
-  const { selected1, selected2, setShowModal, price, multiplyPrice } =
+  const { selected, selected1, selected2, setShowModal, price, multiplyPrice } =
     useGlobalContext()!;
   return (
     <div
@@ -12,7 +12,8 @@ const Modal = () => {
       transition-opacity  duration-200 ease-in-out`}
     >
       <div
-        className={`m-auto max-w-[1120px] w-[800px] h-[600px] md:w-[600px] md:h-[500px] smm:max-w-[90vw] smm:h-fit`}
+        className={`m-auto max-w-[1120px] w-[800px] h-[600px] md:w-[600px] 
+        md:h-[500px] smm:max-w-[90vw] smm:h-fit`}
       >
         <div
           className="w-full h-full  lg:w-auto p-5 smm:p-[2vw]  align-middle transition-all 
@@ -32,13 +33,45 @@ const Modal = () => {
           </div>
           <div className="flex flex-col gap-y-[14px] mt-[14px]">
             <div className="m-auto">
-              <Image
-                src="/EVM.png"
-                width={300}
-                height={300}
-                alt=""
-                className="w-[52px] mdm:w-[6vw]"
-              />
+              {selected === 0 && (
+                <>
+                  <div className="m-auto">
+                    <Image
+                      src="/EVM.png"
+                      width={100}
+                      height={100}
+                      alt="EVM"
+                      className="w-[52px] mdm:w-[7vw]"
+                    />
+                  </div>
+                </>
+              )}
+              {selected === 1 && (
+                <>
+                  <div className="m-auto">
+                    <Image
+                      src="/ES.png"
+                      width={300}
+                      height={300}
+                      alt="Picture of the author"
+                      className="w-[52px] mdm:w-[10vw]"
+                    />
+                  </div>
+                </>
+              )}
+              {selected === 2 && (
+                <>
+                  <div className="m-auto">
+                    <Image
+                      src="/Ethereum.png"
+                      width={300}
+                      height={300}
+                      alt="Picture of the author"
+                      className="w-[52px] mdm:w-[10vw]"
+                    />
+                  </div>
+                </>
+              )}
             </div>
             <div className="flex flex-col gap-y-[14px]">
               <p className="m-auto text-white mdm:text-sm">Send {price} EVM</p>
@@ -46,14 +79,14 @@ const Modal = () => {
                 ~${multiplyPrice}
               </p>
             </div>
-            <div className="flex items-center gap-x-[10px] m-auto mdm:flex-col mdm:gap-y-[2vw]">
+            <div className="flex items-center gap-x-[10px] m-auto mdm:flex-col smm:w-full mdm:gap-y-[2vw]">
               <div
-                className="flex items-center w-[180px] p-1 bg-transparent rounded-lg
-              border-2 border-[#FFFFFF]/60"
+                className="flex items-center w-[180px] p-1 bg-[#FFFFFF]/20 rounded-lg
+              border-2 border-[#FFFFFF]/60 hover:bg-[#FFFFFF]/40 smm:w-full"
               >
                 {selected1 === 0 && (
                   <>
-                    <div className="flex items-center gap-x-3 text-white/60">
+                    <div className="flex items-center gap-x-3 text-white">
                       <Image
                         src="/bnb-chain.png"
                         width={300}
@@ -67,7 +100,7 @@ const Modal = () => {
                 )}
                 {selected1 === 1 && (
                   <>
-                    <div className="flex items-center gap-x-3 text-white/60">
+                    <div className="flex items-center gap-x-3 text-white">
                       <Image
                         src="/immutablex.png"
                         width={300}
@@ -99,12 +132,12 @@ const Modal = () => {
                 />
               </div>
               <div
-                className="flex items-center w-[180px] p-1 bg-transparent rounded-lg
-              border-2 border-[#FFFFFF]/60"
+                className="flex items-center w-[180px] p-1 bg-[#FFFFFF]/20 
+                rounded-lg border-2 border-[#FFFFFF]/60 smm:w-full hover:bg-[#FFFFFF]/40"
               >
                 {selected2 === 0 && (
                   <>
-                    <div className="flex items-center gap-x-3 text-white/60">
+                    <div className="flex items-center gap-x-3 text-white">
                       <Image
                         src="/bnb-chain.png"
                         width={300}
@@ -118,7 +151,7 @@ const Modal = () => {
                 )}
                 {selected2 === 1 && (
                   <>
-                    <div className="flex items-center gap-x-3 text-white/60">
+                    <div className="flex items-center gap-x-3 text-white">
                       <Image
                         src="/immutablex.png"
                         width={300}
@@ -158,8 +191,8 @@ const Modal = () => {
             </div>
           </div>
           <div className="flex flex-col gap-y-[14px] mt-[14px]">
-            <div className="flex justify-center text-red-500 text-sm items-center">
-              <button className="bg-transparent rounded-full p-1 smm:text-xs">
+            <div className="flex justify-center text-red-500 text-xs items-center">
+              <button className="bg-transparent rounded-full p-1">
                 <Image
                   src="/error.png"
                   width={300}

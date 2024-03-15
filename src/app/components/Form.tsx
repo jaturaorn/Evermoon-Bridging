@@ -12,38 +12,6 @@ import { useGlobalContext } from "../context/global";
 const Form = () => {
   const { isOpen, setIsOpen, showModal, setShowModal, clearAllState } =
     useGlobalContext()!;
-  const [transpose, setTranspose] = useState(false);
-  // const [isOpen, SetIsOpen] = useState(false);
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [selected, SetSelected] = useState(0);
-  const [selected1, setSelected1] = useState(0);
-  const [selected2, SetSelected2] = useState(1);
-  const [price, setPrice] = useState("");
-  const [multiplyPrice, setMultiplyPrice] = useState<number | null>(null);
-  // const [showModal, setShowModal] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = e.target.value;
-    setPrice(inputValue);
-    const multipliedPrice = parseFloat(inputValue) * 2;
-    setMultiplyPrice(isNaN(multipliedPrice) ? 0 : multipliedPrice);
-  };
-
-  const selectDropdown = (a: number) => {
-    SetSelected(a);
-    setIsOpen(isOpen);
-  };
-
-  const selectDropdown1 = (a: number) => {
-    setSelected1(a);
-    setIsOpen1(isOpen);
-  };
-
-  const selectDropdown2 = (a: number) => {
-    SetSelected2(a);
-    setIsOpen2(isOpen);
-  };
 
   return (
     <main className="flex justify-center items-center min-h-screen">

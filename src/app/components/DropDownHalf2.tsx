@@ -5,8 +5,14 @@ import { useGlobalContext } from "../context/global";
 import Image from "next/image";
 
 const DropDownHalf2 = () => {
-  const { transpose, isOpen2, setIsOpen2, selectDropdown2, selected2 } =
-    useGlobalContext()!;
+  const {
+    transpose,
+    isOpen2,
+    setIsOpen2,
+    selectDropdown2,
+    selected2,
+    selected1,
+  } = useGlobalContext()!;
   return (
     <div className="inline-block" onClick={() => setIsOpen2(!isOpen2)}>
       <button
@@ -23,7 +29,7 @@ const DropDownHalf2 = () => {
       >
         {selected2 === 0 && (
           <>
-            <div className="flex items-center gap-x-1">
+            <div className={`flex items-center gap-x-1`}>
               <Image
                 src="/bnb-chain.png"
                 width={300}
@@ -96,6 +102,7 @@ gap-x-1 mdm:p-[1vw]"
                 BNB Chain
               </p>
             </li>
+
             <li onClick={() => selectDropdown2(1)}>
               <p
                 className="flex items-center p-2 text-sm text-white 

@@ -1,6 +1,5 @@
 import Banner from "./components/Banner";
 import Form from "./components/Form";
-import Modal from "./components/Modal";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
@@ -9,7 +8,6 @@ export default function Home() {
       <Navbar />
       <Banner />
       <Form />
-      {/* <Modal /> */}
     </main>
   );
 }
