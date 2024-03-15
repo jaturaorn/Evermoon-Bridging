@@ -79,7 +79,7 @@ const DropdownHalf = () => {
         <div
           className="absolute left-[0%] mt-10 origin-top-right bg-main-2  rounded-lg 
           shadow-lg w-[200px] ring-1 ring-black ring-opacity-5  border-2 border-main-1
-          mdm:w-full  smm:mt-[37px]"
+          mdm:w-full smm:mt-[37px] z-30"
         >
           <ul
             role="menu"
@@ -97,7 +97,7 @@ const DropdownHalf = () => {
                   width={300}
                   height={300}
                   alt="Picture of the author"
-                  className="w-[25px] mdm:w-[6vw]"
+                  className="w-[25px] smm:w-[4.5vw]"
                 />
                 BNB Chain
               </p>
@@ -114,7 +114,7 @@ const DropdownHalf = () => {
                   width={300}
                   height={300}
                   alt="Picture of the author"
-                  className="w-[25px] mdm:w-[6vw]"
+                  className="w-[25px] smm:w-[4.5vw]"
                 />
                 ImmutableX
               </p>

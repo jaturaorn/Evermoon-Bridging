@@ -10,8 +10,7 @@ import Modal from "./Modal";
 import { useGlobalContext } from "../context/global";
 
 const Form = () => {
-  const { isOpen, setIsOpen, showModal, setShowModal, clearAllState } =
-    useGlobalContext()!;
+  const { showModal, setShowModal, clearAllState } = useGlobalContext()!;
 
   return (
     <main className="flex justify-center items-center min-h-screen">

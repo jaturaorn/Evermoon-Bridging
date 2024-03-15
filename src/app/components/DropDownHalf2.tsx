@@ -5,14 +5,8 @@ import { useGlobalContext } from "../context/global";
 import Image from "next/image";
 
 const DropDownHalf2 = () => {
-  const {
-    transpose,
-    isOpen2,
-    setIsOpen2,
-    selectDropdown2,
-    selected2,
-    selected1,
-  } = useGlobalContext()!;
+  const { transpose, isOpen2, setIsOpen2, selectDropdown2, selected2 } =
+    useGlobalContext()!;
   return (
     <div className="inline-block" onClick={() => setIsOpen2(!isOpen2)}>
       <button
@@ -25,7 +19,7 @@ const DropDownHalf2 = () => {
         } gap-x-2 bg-main-2  rounded-lg text-white 
         border-2 border-main-1 focus:outline-none 
         w-[200px] transition-all duration-200 
-        mdm:bottom-[-198%] mdm:w-full mdm:border-[1px]`}
+        mdm:bottom-[-210%] mdm:w-full mdm:border-[1px]`}
       >
         {selected2 === 0 && (
           <>
@@ -76,10 +70,10 @@ const DropDownHalf2 = () => {
       </button>
       {isOpen2 && (
         <div
-          className="absolute left-[56%] mt-10 origin-top-right bg-main-2  rounded-lg 
+          className="absolute right-[0%] mt-10 origin-top-right bg-main-2  rounded-lg 
       shadow-lg w-[200px] ring-1 ring-black 
-      ring-opacity-5 border-2 border-main-1
-      smm:left-[0%] mdm:w-full  smm:mt-[140px]"
+      ring-opacity-5 border-2 border-main-1 md:
+      smm:left-[0%] mdm:w-full smm:mt-[139px]"
         >
           <ul
             role="menu"
@@ -97,7 +91,7 @@ gap-x-1 mdm:p-[1vw]"
                   width={300}
                   height={300}
                   alt="Picture of the author"
-                  className="w-[25px] mdm:w-[6vw]"
+                  className="w-[25px] mdm:w-[6vw] smm:w-[4.5vw]"
                 />
                 BNB Chain
               </p>
@@ -114,7 +108,7 @@ gap-x-1 mdm:p-[1vw]"
                   width={300}
                   height={300}
                   alt="Picture of the author"
-                  className="w-[25px] mdm:w-[6vw]"
+                  className="w-[25px] mdm:w-[6vw] smm:w-[4.5vw]"
                 />
                 ImmutableX
               </p>

@@ -18,7 +18,7 @@ const Chain = () => {
           type="button"
           className={`absolute left-[48%] top-[60%]
            bg-main-2 text-white cursor-pointer
-          mdm:top-[150%] mdm:left-[47%]`}
+          mdm:top-[155%] mdm:left-[47%]`}
           onClick={() => setTranspose(!transpose)}
         >
           <Image

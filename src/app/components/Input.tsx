@@ -4,7 +4,7 @@ import { useGlobalContext } from "../context/global";
 const Input = () => {
   const { price, multiplyPrice, handleInputChange } = useGlobalContext()!;
   return (
-    <div className="flex flex-col gap-y-2 mdm:mt-[110px]">
+    <div className="flex flex-col gap-y-2 mdm:mt-[105px]">
       <div className="flex justify-between">
         <h2 className="text-white">Form:</h2>
         <h2 className="text-main-3">Binance</h2>
