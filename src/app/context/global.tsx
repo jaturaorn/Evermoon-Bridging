@@ -100,9 +100,9 @@ export function GlobalProvider(props: any) {
     if (connectWallet === true) {
       setIsHover(!isHover);
 
-      setTimeout(() => {
-        setIsHover(false);
-      }, 3000);
+      // setTimeout(() => {
+      //   setIsHover(false);
+      // }, 3000);
     }
   };
 

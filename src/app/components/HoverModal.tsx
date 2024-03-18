@@ -9,17 +9,16 @@ const HoverModal = () => {
     connectWallet,
     setConnectWallet,
     isHover,
-    setIsHover,
     handleHoverModal,
     copied,
     handleCopy,
   } = useGlobalContext()!;
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block xlm:hidden">
       <button
         className="flex items-center px-[15px] py-[12px] bg-gradient-to-r from-[#372C7D] to-[#0B0436] 
-        rounded-lg text-lg gap-x-2 border-2 border-white text-white xlm:hidden"
+        rounded-lg text-lg gap-x-2 border-[1px] border-white text-white xlm:hidden"
         onClick={() => setConnectWallet(!connectWallet)}
         onMouseEnter={handleHoverModal}
       >
@@ -114,9 +113,10 @@ const HoverModal = () => {
               </button>
             </div>
             {copied && <p className="text-main-1 text-xs">Text copied!</p>}
-            <button
+            {/* <button
               className="flex items-center m-auto bg-[#E53935] w-[120px] p-2 rounded-lg capitalize
                 border-[1px] gap-x-1 border-white text-white mdm:w-[30vw]"
+              // onMouseOut={() => setIsOpen(!isOpen)}
             >
               disconnect
               <Image
@@ -126,7 +126,7 @@ const HoverModal = () => {
                 alt="Picture of the author"
                 className="w-[18px]"
               />
-            </button>
+            </button> */}
           </div>
         </div>
       )}
