@@ -49,13 +49,13 @@ const DropdownHalf = () => {
           <>
             <div className="flex items-center gap-x-1">
               <Image
-                src="/immutablex.png"
+                src="/immutable.png"
                 width={300}
                 height={300}
                 alt="Picture of the author"
-                className="w-[25px] mdm:w-[4.5vw]"
+                className="w-[23px] mdm:w-[4.5vw]"
               />
-              ImmutableX
+              Immutable
             </div>
             <div>
               <Image
@@ -104,13 +104,13 @@ const DropdownHalf = () => {
         font-semibold cursor-pointer gap-x-1 mdm:p-[1vw]"
               >
                 <Image
-                  src="/immutablex.png"
+                  src="/immutable.png"
                   width={300}
                   height={300}
                   alt="Picture of the author"
-                  className="w-[25px] smm:w-[4.5vw]"
+                  className="w-[23px] mdm:w-[4.5vw]"
                 />
-                ImmutableX
+                Immutable
               </p>
             </li>
           </ul>

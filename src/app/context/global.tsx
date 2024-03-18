@@ -42,6 +42,8 @@ type GlobalValue = {
   setCopied: Dispatch<SetStateAction<boolean>>;
   handleHoverModal: any;
   handleCopy: any;
+  showFadeUp: boolean;
+  setShowFadeUp: Dispatch<SetStateAction<boolean>>;
 } | null;
 
 export const GlobalContext = createContext<GlobalValue>(null);
@@ -60,6 +62,7 @@ export function GlobalProvider(props: any) {
   const [connectWallet, setConnectWallet] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [showFadeUp, setShowFadeUp] = useState(true);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
@@ -151,6 +154,8 @@ export function GlobalProvider(props: any) {
     copied,
     setCopied,
     handleCopy,
+    showFadeUp,
+    setShowFadeUp,
   };
 
   return (

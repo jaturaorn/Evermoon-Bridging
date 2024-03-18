@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <main className="w-full h-[500px] smm:w-full smm:h-[80vw]">
+    <main className="w-full h-[350px] smm:w-full smm:h-[80vw]">
       <div
         className="flex justify-center h-full items-center 
        bg-[url('/environment1.png')] bg-no-repeat bg-center

@@ -8,12 +8,12 @@ const Modal = () => {
   return (
     <div
       className={`flex justify-content items-center bg-black/40 backdrop-blur-xl  
-       fixed inset-0 z-50 outline-none focus:outline-none   
-      transition-opacity  duration-200 ease-in-out`}
+       fixed inset-0 smm:bottom-0 z-50 outline-none focus:outline-none   
+      transition-opacity duration-300 ease-in-out`}
     >
       <div
         className={`m-auto max-w-[1120px] w-[800px] h-[600px] md:w-[600px] 
-        md:h-[500px] smm:max-w-[90vw] smm:h-fit`}
+        md:h-[500px] smm:max-w-[90vw] smm:h-[130vw]`}
       >
         <div
           className="w-full h-full  lg:w-auto p-5 smm:p-[2vw]  align-middle transition-all 
@@ -86,7 +86,7 @@ const Modal = () => {
               >
                 {selected1 === 0 && (
                   <>
-                    <div className="flex items-center gap-x-3 text-white">
+                    <div className="flex items-center gap-x-2 text-white">
                       <Image
                         src="/bnb-chain.png"
                         width={300}
@@ -100,24 +100,15 @@ const Modal = () => {
                 )}
                 {selected1 === 1 && (
                   <>
-                    <div className="flex items-center gap-x-3 text-white">
+                    <div className="flex items-center gap-x-2 text-white">
                       <Image
-                        src="/immutablex.png"
+                        src="/immutable.png"
                         width={300}
                         height={300}
                         alt="Picture of the author"
-                        className="w-[25px] mdm:w-[4.5vw]"
+                        className="w-[22px] mdm:w-[4.5vw]"
                       />
-                      ImmutableX
-                    </div>
-                    <div>
-                      <Image
-                        src="/Arrow_down.png"
-                        width={200}
-                        height={200}
-                        alt="Picture of the author"
-                        className="w-[20px] mdm:w-[4.5vw]"
-                      />
+                      Immutable
                     </div>
                   </>
                 )}
@@ -153,13 +144,13 @@ const Modal = () => {
                   <>
                     <div className="flex items-center gap-x-3 text-white">
                       <Image
-                        src="/immutablex.png"
+                        src="/immutable.png"
                         width={300}
                         height={300}
                         alt="Picture of the author"
-                        className="w-[25px] mdm:w-[4.5vw]"
+                        className="w-[22px] mdm:w-[4.5vw]"
                       />
-                      ImmutableX
+                      Immutable
                     </div>
                   </>
                 )}
