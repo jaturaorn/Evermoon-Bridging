@@ -1,10 +1,10 @@
 "use client";
 
-import { useGlobalContext } from "../context/Global";
+import { useGlobalContext } from "../../../State/global";
 
 import Image from "next/image";
 
-import HoverModal from "./HoverModal";
+import HoverModal from "./components/HoverModal";
 
 const Navbar = () => {
   return (

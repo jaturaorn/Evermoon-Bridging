@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useGlobalContext } from "../context/Global";
+import { useGlobalContext } from "../../../../State/global";
 
 const Input = () => {
   const { price, multiplyPrice, handleInputChange } = useGlobalContext()!;

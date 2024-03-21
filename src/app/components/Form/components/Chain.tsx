@@ -1,10 +1,10 @@
 "use client";
 
-import { useGlobalContext } from "../context/Global";
+import { useGlobalContext } from "../../../../State/global";
 
 import Image from "next/image";
-import DropDownHalf2 from "./DropDownHalf2";
-import DropdownHalf from "./DropdownHalf";
+import DropDownHalf2 from "../../DropDownHalf2";
+import DropdownHalf from "../../DropdownHalf";
 
 const Chain = () => {
   const { transpose, setTranspose } = useGlobalContext()!;
